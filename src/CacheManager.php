@@ -22,6 +22,13 @@ interface CacheManager {
 
 	public function delMulti(array $keys);
 
-	public function connect(array $settings);
+	public function setConnectionParams(array $settings);
 
+	public function getStamp(string $key, int $exp = 3600);
+
+	public function increment(string $key, int $offset = 1, int $initial_value = 0, int $expiry = 0);
+
+	public function decrement(string $key, int $offset = 1, int $initial_value = 0, int $expiry = 0);
+
+	public function flush();
 }

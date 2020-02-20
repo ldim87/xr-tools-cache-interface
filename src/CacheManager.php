@@ -31,4 +31,6 @@ interface CacheManager {
 	public function decrement(string $key, int $offset = 1, int $initial_value = 0, int $expiry = 0);
 
 	public function flush();
+
+	public function getStats();
 }

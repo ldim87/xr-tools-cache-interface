@@ -14,9 +14,9 @@ interface CacheManager {
 
 	public function getMulti(array $keys, bool $unjson = false);
 
-	public function set($key, $value = null, int $expiration = null, bool $json = false);
+	public function set($key, $value = null, ?int $expiration = null, bool $json = false);
 
-	public function setMulti(array $keys, int $expiration = null, bool $json = false);
+	public function setMulti(array $keys, ?int $expiration = null, bool $json = false);
 
 	public function del($key);
 

@@ -33,4 +33,6 @@ interface CacheManager {
 	public function flush();
 
 	public function getStats();
+
+	public function setOptions(array $opt);
 }
